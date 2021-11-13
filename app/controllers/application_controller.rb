@@ -1,6 +1,8 @@
 class ApplicationController < Sinatra::Base
-  set default_content_type: "application/json"
-  
+  # set default_content_type: "application/json"
+  get '/' do
+    "Hi"
+  end
   get '/bakeries' do
     bakeries = Bakery.all
     bakeries.to_json
